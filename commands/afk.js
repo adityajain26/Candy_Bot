@@ -7,8 +7,8 @@ module.exports = {
         const embed = new Discord.MessageEmbed().setColor('#ff3366')
         if (!afk) {
             embed.setDescription(`Your AFK is set, **${message.author.username}**`)
-            embed.setFooter(`REASON: ${args.join(" ") ? args.join(" ") : "AFK"}`, 'https://i.imgur.com/IFk2Neb.png')
-            status.set(message.author.id, args.join(" ") || `AFK`);
+            embed.setFooter(`REASON: ${args.join(" ") ? args.join(" ") : "I'm AFK folks!"}`, 'https://i.imgur.com/IFk2Neb.png')
+            status.set(message.author.id, args.join(" ") || `I'm AFK folks!`);
         } else {
             embed.setDescription("You are no longer AFK!");
             status.delete(message.author.id);
