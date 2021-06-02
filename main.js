@@ -11,7 +11,7 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-var cmdList = ['help', 'zoh', 'rick', 'ping', 'ask', 'fortune', 'serverinfo', 'purge', 'remind', 'afk', 'aboutme'];
+var cmdList = ['help', 'zoh', 'rick', 'ping', 'ask', 'fortune', 'serverinfo', 'purge', 'remind', 'afk', 'aboutme', 'weather'];
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
