@@ -2,7 +2,7 @@ module.exports = {
   name: 'sticky',
   description: "This is a sticky command!",
   execute(Discord, client) {
-    // const MyStickyChannelID = '788777431082467378';
+    const MyStickyChannelID = '788777431082467378';
     let cacheMsgs = [];
 
     client.on('ready', async () => {
