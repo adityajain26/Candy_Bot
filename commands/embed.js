@@ -8,7 +8,7 @@ module.exports = {
         if (!args[0]) {
             const page1 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                .setTitle("Candy-Bot v0.9 Beta")
+                .setTitle("Candy-Bot v1.1 Beta")
                 .setDescription('Commands List • Page 1 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
@@ -19,7 +19,7 @@ module.exports = {
 
             const page2 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                  .setTitle("Candy-Bot v0.9 Beta")
+                  .setTitle("Candy-Bot v1.1 Beta")
                 .setDescription('Commands List • Page 2 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
@@ -30,7 +30,7 @@ module.exports = {
 
             const page3 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                .setTitle("Candy-Bot v0.9 Beta")
+                .setTitle("Candy-Bot v1.1 Beta")
                 .setDescription('Commands List • Page 3 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
