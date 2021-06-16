@@ -2,7 +2,7 @@ module.exports = {
   name: 'sticky',
   description: "This is a sticky command!",
   execute(Discord, client) {
-    const MyStickyChannelID = '843825486697594930';
+    // const MyStickyChannelID = '788777431082467378';
     let cacheMsgs = [];
 
     client.on('ready', async () => {
@@ -10,7 +10,9 @@ module.exports = {
       if (stickyChannel) {
         const m = await stickyChannel.send(new Discord.MessageEmbed()
           .setColor('#ff3366')
-          .setDescription('Do not want to get pings? Get the <@&830065615867346975> role from <#830060094150279182>')
+          .setTitle('Support The Candy-Shop')
+          .setThumbnail('https://i.imgur.com/IFk2Neb.png')
+          .setDescription(`https://discordbotlist.com/servers/the-candy-shop/upvote \n\nhttps://top.gg/servers/764915705300385812/vote`)
           .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
         cacheMsgs.push(m.id);
       }
@@ -37,7 +39,9 @@ module.exports = {
         // Send message and add to cache
         const m = await message.channel.send(new Discord.MessageEmbed()
           .setColor('#ff3366')
-          .setDescription('Do not want to get pings? Get the <@&830065615867346975> role from <#830060094150279182>')
+          .setTitle('Support The Candy-Shop')
+          .setThumbnail('https://i.imgur.com/IFk2Neb.png')
+          .setDescription(`https://discordbotlist.com/servers/the-candy-shop/upvote \n\nhttps://top.gg/servers/764915705300385812/vote`)
           .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
         cacheMsgs.push(m.id);
       }
