@@ -6,7 +6,7 @@ module.exports = {
         if (temp < 1 || temp > 99) {
             message.channel.send(new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setDescription(`**Wrong Format!**\nSpecify number of messages to purge (1-99)\n\nRun **<help purge** for more info on Purge`)
+                .setDescription(`**Wrong Format!**\nSpecify number of messages to purge (1-99)\n\nRun **)help purge** for more info on Purge`)
                 .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
         }
         else {

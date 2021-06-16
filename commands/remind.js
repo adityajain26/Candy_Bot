@@ -13,17 +13,17 @@ module.exports = {
 
         const notime = new Discord.MessageEmbed()
             .setColor('#ff0000')
-            .setDescription(`**Wrong Format!**\nSpecify the Time & Reason\n\nRun **<help remind** for more info on Remind`)
+            .setDescription(`**Wrong Format!**\nSpecify the Time & Reason\n\nRun **)help remind** for more info on Remind`)
             .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png');
 
         const wrongtime = new Discord.MessageEmbed()
             .setColor('#ff0000')
-            .setDescription(`**Wrong Time!**\nValid Units\n•**d**(days)\n•**m**(mins)\n•**h**(hrs)\n•**s**(secs)\n\nRun **<help remind** for more info on Remind`)
+            .setDescription(`**Wrong Time!**\nValid Units\n•**d**(days)\n•**m**(mins)\n•**h**(hrs)\n•**s**(secs)\n\nRun **)help remind** for more info on Remind`)
             .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png');
 
         const reminderembed = new Discord.MessageEmbed()
             .setColor('#ff0000')
-            .setDescription(`**Wrong Format**\nMention what you want to be reminded of?\n\nRun **<help remind** for more info on Remind`)
+            .setDescription(`**Wrong Format**\nMention what you want to be reminded of?\n\nRun **)help remind** for more info on Remind`)
             .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png');
 
         if (!args[0]) return message.channel.send(notime)

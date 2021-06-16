@@ -3,13 +3,13 @@ module.exports = {
     description: "Ask Staff",
     execute(message, args, client, Discord) {
         //Channel for support x
-        const channel = client.channels.cache.get('831817869175291904')
+        const channel = client.channels.cache.get('788706739024691230')
 
         //Error if no support specified x
         const query = args.join(' ');
         if (!query) return message.channel.send(new Discord.MessageEmbed()
             .setColor('#ff0000')
-            .setDescription(`**Wrong Format!**\nSpecify the Query you have\n\nRun **<help ask** for more info on Ask`)
+            .setDescription(`**Wrong Format!**\nSpecify the Query you have\n\nRun **)help ask** for more info on Ask`)
             .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
 
         //Embed for Support x

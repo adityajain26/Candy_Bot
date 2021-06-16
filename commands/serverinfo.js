@@ -31,7 +31,7 @@ module.exports = {
                     value: message.guild.emojis.cache.size
                 }
             )
-            .setDescription('Run **<help** for Commands List')
+            .setDescription('Run **)help** for Commands List')
             .setFooter('Candy-Bot • Handmade for Candy-Shop', 'https://i.imgur.com/IFk2Neb.png')
 
         message.channel.send(embed)

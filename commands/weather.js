@@ -9,7 +9,7 @@ module.exports = {
             // 'C' can be changed to 'F' for farneheit results
             if (error) return message.channel.send(new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setDescription(`**Wrong Format!**\nSpecify the Location\n\nRun **<help weather** for more info on Weather`)
+                .setDescription(`**Wrong Format!**\nSpecify the Location\n\nRun **)help weather** for more info on Weather`)
                 .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
             if (!args[0]) return message.channel.send('Please specify a Location')
 

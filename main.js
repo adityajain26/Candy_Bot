@@ -5,7 +5,7 @@ require('dotenv').config();
 const client = new Discord.Client();
 const db = require('quick.db');
 
-const prefix = '<';
+const prefix = ')';
 
 const fs = require('fs');
 
@@ -30,15 +30,15 @@ client.on("ready", () => {
     client.user.setActivity("Zoh🌹", { type: "LISTENING" })
 })
 
-client.on('guildMemberAdd', guildMember => {
-    client.commands.get('welcome').execute(guildMember, Discord);
-})
+// client.on('guildMemberAdd', guildMember => {
+//     client.commands.get('welcome').execute(guildMember, Discord);
+// })
 
 // All for Zoh's Birthday! x
 
 client.on('message', async message => {
 
-    client.commands.get('mention').execute(message, Discord);
+    client.commands.get('mention').execute(message, Discord, client);
 
     //AFK Response and Coming Back x
     let afk = new db.table("AFKs"),
@@ -80,8 +80,8 @@ client.on('message', async message => {
             .setTitle("KawaiiNeko Meter 🐾")
             .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
             .setThumbnail('https://i.imgur.com/j6VOmQF.png')
-        message.channel.send(zohEmbed)
-    } else if (command === 'rick') {
+        message.channel.send(zohEmbed);
+    } else if (command === 'bait') {
         message.channel.send('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     } else if (command === 'ping') {
         client.commands.get('ping').execute(message, args);
@@ -110,22 +110,13 @@ client.on('message', async message => {
         }
 
     } else if (command.includes('remind')) {
-        if (message.member.permissions.has("ADMINISTRATOR")) {
-            client.commands.get('remind').execute(message, args, client, Discord);
-        } else {
-            message.channel.send('Dumbass, you do not have perms for that!');
-        }
-
+        client.commands.get('remind').execute(message, args, client, Discord);
     } else if (command.includes('afk')) {
-        if (message.member.permissions.has("ADMINISTRATOR")) {
-            client.commands.get('afk').execute(message, args, Discord, db);
-        } else {
-            message.channel.send('Dumbass, you do not have perms for that!');
-        }
+        client.commands.get('afk').execute(message, args, Discord, db);
     } else if ((!message.content.startsWith('<@')) && (!command.includes(cmdList)) && (!message.content.endsWith('>')) && (message.content.includes('<'))) {
         message.channel.send(new Discord.MessageEmbed()
             .setColor('#ff3366')
-            .setDescription('Command Not Found!\n\nUse **<help** to see Commands List\n\nFor more info on a cmd, use **<help <cmdname>**')
+            .setDescription('Command Not Found!\n\nUse **)help** to see Commands List\n\nFor more info on a cmd, use **)help <cmdname>**')
             .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
     }
 })
