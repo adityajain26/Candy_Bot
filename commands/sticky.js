@@ -5,18 +5,18 @@ module.exports = {
     const MyStickyChannelID = '788777431082467378';
     let cacheMsgs = [];
 
-    client.on('ready', async () => {
-      const stickyChannel = client.channels.cache.get(MyStickyChannelID);
-      if (stickyChannel) {
-        const m = await stickyChannel.send(new Discord.MessageEmbed()
-          .setColor('#ff3366')
-          .setTitle('Support The Candy-Shop')
-          .setThumbnail('https://i.imgur.com/IFk2Neb.png')
-          .setDescription(`https://discordbotlist.com/servers/the-candy-shop/upvote \n\nhttps://top.gg/servers/764915705300385812/vote`)
-          .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
-        cacheMsgs.push(m.id);
-      }
-    });
+    // client.on('ready', async () => {
+    //   const stickyChannel = client.channels.cache.get(MyStickyChannelID);
+    //   if (stickyChannel) {
+    //     const m = await stickyChannel.send(new Discord.MessageEmbed()
+    //       .setColor('#ff3366')
+    //       .setTitle('Support The Candy-Shop')
+    //       .setThumbnail('https://i.imgur.com/IFk2Neb.png')
+    //       .setDescription(`https://discordbotlist.com/servers/the-candy-shop/upvote \n\nhttps://top.gg/servers/764915705300385812/vote`)
+    //       .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
+    //     cacheMsgs.push(m.id);
+    //   }
+    // });
 
     client.on('message', async message => {
       if (message.author.bot) return;

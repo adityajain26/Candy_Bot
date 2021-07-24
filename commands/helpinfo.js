@@ -54,7 +54,7 @@ module.exports = {
             message.channel.send(new Discord.MessageEmbed()
                 .setColor('#ff0000')
                 .setTitle('Command Not Found!')
-                .setDescription(`Use **(help** to see Commands List\n\nFor more info of a cmd, use **)help <botcmd>** without the '<>'\n\ne.g )help ask, )help serverinfo`)
+                .setDescription(`Use **)help** to see Commands List\n\nFor more info of a cmd, use **)help <botcmd>** without the '<>'\n\ne.g )help ask, )help serverinfo`)
                 .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
         }
     }
