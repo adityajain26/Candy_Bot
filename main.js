@@ -76,10 +76,38 @@ client.on('message', async message => {
         client.commands.get('embed').execute(message, args, Discord, client);
     } else if (command === 'zoh') {
         const cute = Math.floor(Math.random() * 11 + 90);
-        let zohEmbed = new Discord.MessageEmbed()
+        let zohEmbed;
+        if(cute <= 91) {
+            zohEmbed = new Discord.MessageEmbed()
             .setTitle("KawaiiNeko Meter 🐾")
             .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
             .setThumbnail('https://i.imgur.com/j6VOmQF.png')
+            .setImage('https://i.imgur.com/fTq65JO.gif')
+        } else if(cute == 92 || cute == 93) {
+            zohEmbed = new Discord.MessageEmbed()
+            .setTitle("KawaiiNeko Meter 🐾")
+            .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
+            .setThumbnail('https://i.imgur.com/j6VOmQF.png')
+            .setImage('https://i.imgur.com/NyTJkW8.gif')
+        } else if(cute == 94 || cute == 95) {
+            zohEmbed = new Discord.MessageEmbed()
+            .setTitle("KawaiiNeko Meter 🐾")
+            .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
+            .setThumbnail('https://i.imgur.com/j6VOmQF.png')
+            .setImage('https://i.imgur.com/FcE1F47.gif')
+        } else if(cute == 96 || cute == 97) {
+            zohEmbed = new Discord.MessageEmbed()
+            .setTitle("KawaiiNeko Meter 🐾")
+            .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
+            .setThumbnail('https://i.imgur.com/j6VOmQF.png')
+            .setImage('https://i.imgur.com/9CGIsaQ.gif')
+        } else if(cute >= 97) {
+            zohEmbed = new Discord.MessageEmbed()
+            .setTitle("KawaiiNeko Meter 🐾")
+            .setDescription(`<@!809454690738765834> is **${cute}%** Kawaii!\n\n But a **100%** Dictator x`)
+            .setThumbnail('https://i.imgur.com/j6VOmQF.png')
+            .setImage('https://i.imgur.com/ADkKSYb.gif')
+        } 
         message.channel.send(zohEmbed);
     } else if (command === 'bait') {
         message.channel.send('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
@@ -93,7 +121,7 @@ client.on('message', async message => {
         client.commands.get('aboutme').execute(message, Discord);
     } else if (command === 'serverinfo') {
         client.commands.get('serverinfo').execute(message, Discord);
-    } else if (command === 'weather') {
+    } else if (command === 'weather' || command === 'w') {
         client.commands.get('weather').execute(client, message, args, Discord);
     } else if (command == 'vote') {
         message.channel.send(new Discord.MessageEmbed()
