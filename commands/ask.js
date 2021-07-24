@@ -21,6 +21,6 @@ module.exports = {
             .setTimestamp()
         channel.send(reportEmbed);
         //Sends Embed x
-        message.channel.send(`Your **Query** has been sent to **<@!409683402418159627>🌻!**`)
+        message.channel.send(`Your **Query** has been sent to the Staff!**`)
     }
 }
