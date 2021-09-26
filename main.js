@@ -11,7 +11,7 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-var cmdList = ['help', 'zoh', 'rick', 'ping', 'ask', 'fortune', 'serverinfo', 'purge', 'remind', 'afk', 'aboutme', 'weather'];
+var cmdList = ['help', 'zoh', 'rick', 'ping', 'ask', 'serverinfo', 'purge', 'remind', 'afk', 'aboutme', 'weather'];
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
@@ -20,8 +20,6 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.commands.get('sticky').execute(Discord, client);
-
 client.once('ready', () => {
     console.log('CandyBot is Alive!');
 })
@@ -29,10 +27,6 @@ client.once('ready', () => {
 client.on("ready", () => {
     client.user.setActivity("Zoh🌹", { type: "LISTENING" })
 })
-
-// client.on('guildMemberAdd', guildMember => {
-//     client.commands.get('welcome').execute(guildMember, Discord);
-// })
 
 // All for Zoh's Birthday! x
 
@@ -115,21 +109,12 @@ client.on('message', async message => {
         client.commands.get('ping').execute(message, args);
     } else if (command === 'ask') {
         client.commands.get('ask').execute(message, args, client, Discord);
-    } else if (command === 'fortune') {
-        client.commands.get('fortune').execute(message, args, Discord);
     } else if (command === 'aboutme') {
         client.commands.get('aboutme').execute(message, Discord);
     } else if (command === 'serverinfo') {
         client.commands.get('serverinfo').execute(message, Discord);
     } else if (command === 'weather' || command === 'w') {
         client.commands.get('weather').execute(client, message, args, Discord);
-    } else if (command == 'vote') {
-        message.channel.send(new Discord.MessageEmbed()
-            .setColor('#ff3366')
-            .setTitle('Support The Candy-Shop')
-            .setThumbnail('https://i.imgur.com/IFk2Neb.png')
-            .setDescription(`https://discordbotlist.com/servers/the-candy-shop/upvote \n\nhttps://top.gg/servers/764915705300385812/vote`)
-            .setFooter('Candy-Bot • ©2021', 'https://i.imgur.com/IFk2Neb.png'));
     } else if (command.includes('purge')) {
         if (message.member.permissions.has("ADMINISTRATOR")) {
             client.commands.get('purge').execute(message, args, Discord);
