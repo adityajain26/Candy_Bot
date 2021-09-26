@@ -8,7 +8,7 @@ module.exports = {
         if (!args[0]) {
             const page1 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                .setTitle("Candy-Bot v1.5")
+                .setTitle("Candy-Bot v2.0")
                 .setDescription('Commands List • Page 1 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
@@ -19,7 +19,7 @@ module.exports = {
 
             const page2 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                  .setTitle("Candy-Bot v1.5")
+                  .setTitle("Candy-Bot v2.0")
                 .setDescription('Commands List • Page 2 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
@@ -30,12 +30,11 @@ module.exports = {
 
             const page3 = new Discord.MessageEmbed()
                 .setColor('#ff3366')
-                .setTitle("Candy-Bot v1.5")
+                .setTitle("Candy-Bot v2.0")
                 .setDescription('Commands List • Page 3 • Prefix [)]')
                 .setThumbnail('https://i.imgur.com/IFk2Neb.png')
                 .addFields(
-                    { name: '**Admin Commands:**', value: "**• purge** Purges Messages\n"},
-                    { name: '**Other Commands:**', value: "**• vote** Upvote Shop | Discord Server List\n**• serverinfo** Basic Server Information\n**• aboutme** About the Candy-Bot\n" }
+                    { name: '**Admin Commands:**', value: "**• purge** Purges Messages\n"}
                 )
                 .setFooter('Page (3/3) • ©2021 • w/❤️ by Adi🌻', 'https://i.imgur.com/IFk2Neb.png');
 
