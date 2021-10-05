@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const config = require('./config.json');
 
 require('dotenv').config();
 
@@ -134,6 +135,6 @@ client.on('message', async message => {
     }
 })
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(config.token);
 
 //Invite Using https://discord.com/oauth2/authorize?client_id=830059326378344529&scope=bot
