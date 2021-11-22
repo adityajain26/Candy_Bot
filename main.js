@@ -68,8 +68,10 @@ client.on('message', async message => {
 
     //Case Handling x
     if (command === 'help') {
+        message.react("✅");
         client.commands.get('embed').execute(message, args, Discord, client);
     } else if (command === 'zoh') {
+        message.react("❤️");
         const cute = Math.floor(Math.random() * 11 + 90);
         let zohEmbed;
         if(cute <= 91) {
@@ -105,29 +107,40 @@ client.on('message', async message => {
         } 
         message.channel.send(zohEmbed);
     } else if (command === 'bait') {
+        message.react("🃏");
         message.channel.send('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     } else if (command === 'ping') {
+        message.react("🔔");
         client.commands.get('ping').execute(message, args);
     } else if (command === 'ask') {
+        message.react("🗣️");
         client.commands.get('ask').execute(message, args, client, Discord);
     } else if (command === 'aboutme') {
+        message.react("🍬");
         client.commands.get('aboutme').execute(message, Discord);
     } else if (command === 'serverinfo') {
+        message.react("ℹ️");
         client.commands.get('serverinfo').execute(message, Discord);
     } else if (command === 'weather' || command === 'w') {
+        message.react("☁️");
         client.commands.get('weather').execute(client, message, args, Discord);
     } else if (command.includes('purge')) {
         if (message.member.permissions.has("ADMINISTRATOR")) {
+            message.react("✅");
             client.commands.get('purge').execute(message, args, Discord);
         } else {
+            message.react("❌");
             message.channel.send('Dumbass, you do not have perms for that!');
         }
 
     } else if (command.includes('remind')) {
+        message.react("⏲️");
         client.commands.get('remind').execute(message, args, client, Discord);
     } else if (command.includes('afk')) {
+        message.react("💤");
         client.commands.get('afk').execute(message, args, Discord, db);
     } else if ((!message.content.startsWith('<@')) && (!command.includes(cmdList)) && (!message.content.endsWith('>')) && (message.content.includes('<'))) {
+        message.react("❌");
         message.channel.send(new Discord.MessageEmbed()
             .setColor('#ff3366')
             .setDescription('Command Not Found!\n\nUse **)help** to see Commands List\n\nFor more info on a cmd, use **)help <cmdname>**')
