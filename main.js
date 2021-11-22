@@ -1,7 +1,6 @@
-const Discord = require('discord.js');
-const config = require('./config.json');
-
 require('dotenv').config();
+
+const Discord = require('discord.js');
 
 const client = new Discord.Client();
 const db = require('quick.db');
@@ -148,6 +147,6 @@ client.on('message', async message => {
     }
 })
 
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
 
 //Invite Using https://discord.com/oauth2/authorize?client_id=830059326378344529&scope=bot
